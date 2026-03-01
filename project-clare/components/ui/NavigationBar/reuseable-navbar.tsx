@@ -11,24 +11,18 @@ import {
   MobileNavMenu,
   ModeToggle,
 } from "@/components/ui/NavigationBar/aceternity-resizable-navbar";
-import { MoonIcon } from "lucide-react";
-import { useTheme } from "next-themes";
 
 import { useState } from "react";
 
 export function ReusableNavbar() {
   const navItems = [
     {
-      name: "Features",
-      link: "#features",
+      name: "Resume",
+      link: "/pages/resume",
     },
     {
-      name: "Pricing",
-      link: "#pricing",
-    },
-    {
-      name: "Contact",
-      link: "#contact",
+      name: "Interests",
+      link: "/pages/interests",
     },
   ];
 
