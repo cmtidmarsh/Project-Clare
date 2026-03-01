@@ -196,8 +196,8 @@ const cards = [
       return (
         <p>
           Developed and maintained user-centric web interfaces for Schneider
-          Electric's critical power management platforms, utilizing React for a
-          new enterprise system and Angular for the Power Operation EPMS
+          Electric&apos;s critical power management platforms, utilizing React
+          for a new enterprise system and Angular for the Power Operation EPMS
           Software, enhancing user experience and operational efficiency.
         </p>
       );

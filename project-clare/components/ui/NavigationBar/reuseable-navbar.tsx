@@ -13,6 +13,8 @@ import {
 } from "@/components/ui/NavigationBar/aceternity-resizable-navbar";
 
 import { useState } from "react";
+import { Popover, PopoverContent, PopoverTrigger } from "../popover";
+import { Button } from "../button";
 
 export function ReusableNavbar() {
   const navItems = [
@@ -39,7 +41,24 @@ export function ReusableNavbar() {
             <NavbarButton variant="secondary">
               <ModeToggle></ModeToggle>
             </NavbarButton>
-            <NavbarButton variant="primary">Contact</NavbarButton>
+            <NavbarButton variant="primary">
+              <div className="flex gap-6">
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button variant="ghost" size={null}>
+                      Contact
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent
+                    align="center"
+                    className="w-60 m-2 text-pretty"
+                  >
+                    <div>cmtidmarsh@gmail.com</div>
+                    <div>574-339-1065</div>
+                  </PopoverContent>
+                </Popover>
+              </div>
+            </NavbarButton>
           </div>
         </NavBody>
 
@@ -73,14 +92,7 @@ export function ReusableNavbar() {
                 variant="primary"
                 className="w-full"
               >
-                Login
-              </NavbarButton>
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
-              >
-                Book a call
+                Contact
               </NavbarButton>
             </div>
           </MobileNavMenu>
